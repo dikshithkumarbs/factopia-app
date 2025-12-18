@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Random Facts</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="main-container">
+
+    <!-- LEFT -->
+    <div class="container left-col">
+        <h2>Random Facts</h2>
+        <p id="fact" class="fact">Press Enter or click the button</p>
+        <div class="buttons">
+            <button onclick="getFact()">Get Random Fact</button>
+            <button onclick="copyFact()">Copy Fact</button>
+            <button onclick="toggleTheme()">Toggle Dark / Light</button>
+            <button onclick="clearHistory()">Clear History</button>
+        </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="container">
+        <h3>Fact History</h3>
+        <div class="history-container">
+            <ul id="history"></ul>
+        </div>
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
